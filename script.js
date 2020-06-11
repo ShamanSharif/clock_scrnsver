@@ -6,6 +6,9 @@ var app = new Vue({
     minutes: 99,
     seconds: 99,
     format: "",
+    upHere: false,
+    isDark: false,
+    moon: "./image/moon_dim.png",
   },
   created: function () {
     setInterval(() => {
@@ -36,6 +39,15 @@ var app = new Vue({
         this.seconds = "0" + _seconds;
       } else {
         this.seconds = _seconds;
+      }
+    },
+    darkModeToggle: function () {
+      if (this.isDark == false) {
+        this.isDark = true;
+        this.moon = "./image/moon_lit.png";
+      } else {
+        this.isDark = false;
+        this.moon = "./image/moon_dim.png";
       }
     },
   },

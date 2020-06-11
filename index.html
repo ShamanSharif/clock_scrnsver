@@ -7,9 +7,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app">
+    <div id="app" v-bind:class="{ dark: isDark, light: !isDark}">
       <div class="menu">
-        . . .
+        <div @mouseover="upHere = true" @mouseleave="upHere = false">
+          <span class="icon-credit" v-show="upHere"
+            ><a
+              target="_blank"
+              href="https://icons8.com/icons/set/crescent-moon"
+              >Crescent Moon icon</a
+            >
+            icon by
+            <a target="_blank" href="https://icons8.com">Icons8</a> | </span
+          ><img @click="darkModeToggle" class="icon" :src="moon" />
+        </div>
       </div>
       <div class="time">
         {{ hours }}:{{ minutes }}:{{ seconds }} {{ format }}

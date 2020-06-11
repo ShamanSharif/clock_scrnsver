@@ -2,8 +2,6 @@
 
 #app {
   font-family: "Roboto", sans-serif;
-  background-color: #f4f1de;
-  color: #3d405b;
   position: absolute;
   top: 0;
   left: 0;
@@ -25,15 +23,36 @@
   align-self: flex-end;
   padding-top: 1rem;
   padding-right: 1rem;
-  opacity: 0.2;
+  opacity: 1;
+  font-size: 0.8rem;
 }
 
 .message {
   font-size: 2rem;
   font-weight: 100;
-  color: #3d405b;
   display: flex;
   align-self: center;
   opacity: 0.5;
   padding-bottom: 1rem;
+}
+
+.icon-credit,
+.icon-credit a {
+  opacity: 0.5;
+  color: #3d405b;
+}
+
+.icon {
+  width: 3rem;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: #3d405b;
+  color: #f4f1de;
+}
+
+.light {
+  background-color: #f4f1de;
+  color: #3d405b;
 }
