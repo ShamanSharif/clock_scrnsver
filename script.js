@@ -26,6 +26,9 @@ var app = new Vue({
           _hours = _hours - 12;
         }
         this.format = "PM";
+      } else if (_hours == 0) {
+        _hours = 12;
+        this.format = "AM";
       } else {
         this.format = "AM";
       }
