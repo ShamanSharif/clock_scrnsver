@@ -9,13 +9,24 @@ var app = new Vue({
     upHere: false,
     isDark: false,
     moon: "./image/moon_dim.png",
+    quotes: {},
   },
-  created: function () {
+  beforeCreate: function () {
     setInterval(() => {
       this.getTime();
     }, 1000);
+    setInterval(() => {
+      this.getQuotes();
+    }, 30000);
   },
   methods: {
+    async getQuotes() {
+      const response = await axios.get(
+        `https://cors-anywhere.herokuapp.com/https://morning-earth-07825.herokuapp.com/api/randomQuotes/`
+      );
+      this.quotes = response.data;
+      this.message = this.quotes[0].body;
+    },
     getTime: function () {
       var d = new Date();
       let _hours = d.getHours();

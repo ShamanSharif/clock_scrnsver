@@ -29,7 +29,7 @@
 
 .message {
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 300;
   display: flex;
   align-self: center;
   opacity: 0.5;
