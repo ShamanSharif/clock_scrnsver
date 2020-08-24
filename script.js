@@ -25,7 +25,7 @@ var app = new Vue({
         `https://cors-anywhere.herokuapp.com/https://morning-earth-07825.herokuapp.com/api/randomQuotes/`
       );
       this.quotes = response.data;
-      this.message = this.quotes[0].body;
+      // this.message = this.quotes[0].body;
     },
     getTime: function () {
       var d = new Date();
